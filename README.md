@@ -6,6 +6,8 @@ A CHECK constraint on the cast, `CHECK (c::text IN ('L', 'M', 'H'))`, refuses th
 `ERROR:  Check constraint "t_check" violated`. PostgreSQL 18.6 removes the trailing space in the cast: it
 answers `[L]` and `t`, and inserts the row.
 
+Reported upstream: https://github.com/dolthub/doltgresql/issues/3325
+
 ## Reproduce it
 
 You need Docker and a POSIX shell: Linux, macOS, or Windows with WSL. The first run downloads the images.
